@@ -25,7 +25,7 @@ def predict():
     
     pred_price = model.predict(np.expand_dims(intp, axis=0))
     # return jsonify({"House Price: ": str(pred_price)})
-    return render_template("index.html", prediction_text=f"House price should be {str(pred_price)}.")
+    return render_template("index.html", prediction_text=f"House price should be {str(pred_price[0])}.")
 
 
 
