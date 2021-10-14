@@ -16,7 +16,7 @@ def home(): return render_template("index.html")
 
 
 @app.route("/predict/", methods=["POST"])
-def price_pred():
+def predict():
     model = pickle.load(open("model.pkl", "rb"))
     choice = load_pickle("column_names.pkl")
     # intp = np.array([request.args.get(name) for name in choice])
